@@ -1,0 +1,2 @@
+[02-Jun-2013 20:38:23 UTC] PHP Fatal error:  Call to undefined function php_info() in /home/shafocom/public_html/tito/test.php on line 10
+[02-Jun-2013 20:44:21 UTC] PHP Fatal error:  Call to undefined function php_info() in /home/shafocom/public_html/tito/test.php on line 10
