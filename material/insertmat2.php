@@ -1,5 +1,5 @@
 <?php
-include("connect.php");
+include("../connect.php");
 
 $id_team = $_POST['id_team2'];
 $jml_ont = $_POST['jml_ont2'];

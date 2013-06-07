@@ -57,8 +57,9 @@
 						<ul class="dropdown-menu dropdown-user-account">
 							<?php
 
-								include("connect.php");
+								include("../connect.php");
 								include '../akun_nav.php';
+								//testingtestingtesting perubahan git
 							?>
 							
 						</ul>
