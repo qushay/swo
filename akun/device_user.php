@@ -9,7 +9,7 @@
 		$hak=$_SESSION['hak'];
 	}
 	if(isset($_GET['p'])){$limit_start=($_GET['p']);}else{$limit_start="0";};
-	include ("connect.php");
+	include ("../connect.php");
 ?>
 
 <html>
@@ -66,7 +66,7 @@
 						<ul class="dropdown-menu dropdown-user-account">
 							<?php
 
-								include("connect.php");
+								include("../connect.php");
 								include '../akun_nav.php';
 							?>
 							
@@ -327,11 +327,11 @@
 										<?php
 											
 									        if (isset($_GET['isactive'])){$fin_isactive= $_GET['isactive'];}else{$fin_isactive="";}
-									        if (isset($_GET['id_pengguna_web'])){$urutan = $_GET['id_pengguna_web'];}else{$urutan ="";}
+									        if (isset($_GET['id_pengguna_device'])){$urutan = $_GET['id_pengguna_device'];}else{$urutan ="";}
 									        
 
 									        if ($fin_isactive=="zzzd" && $urutan != ""){
-									            mysql_query("update penggunaweb set isactive=0 where id_pengguna_web='$urutan';");
+									            mysql_query("update penggunadevice set isactive=0 where id_pengguna_device='$urutan';");
 									        }
 										?>
 										

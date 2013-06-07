@@ -13,6 +13,8 @@ while($ar_get_id_sto = mysql_fetch_array($get_id_sto)){
 	$id_sto2 = $ar_get_id_sto["id_sto"];
 }
 
+$hitungrows = mysql_num_rows($get_id_sto);
+echo $hitungrows;
 
 if ($cpassword==$password){
 	$check = 1;
@@ -22,9 +24,9 @@ if ($cpassword==$password){
 
 
 if ($username != "" && $check==1){
-	$insert =mysql_query("insert into penggunadevice(username_pengguna_device, password_pengguna_device, id_sto, id_team, id_area) values ('$username','$password','$id_sto2','$id_team','$id_area');");
+	$insert = mysql_query("insert into penggunadevice(username_pengguna_device, password_pengguna_device, id_sto, id_team, id_area) values ('$username','$password','$id_sto2','$id_team','$id_area');");
 
-	//$insert =mysql_query("insert into penggunadevice(username_pengguna_device, password_pengguna_device, id_sto, id_team, id_area) values ('juanda','tes',2,2,2);");	
+	//$insert = mysql_query("insert into penggunadevice(username_pengguna_device, password_pengguna_device, id_sto, id_team, id_area) values ('juanda','tes',2,2,2);");	
 }
 
 

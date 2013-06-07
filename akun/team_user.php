@@ -402,11 +402,11 @@
 										<?php
 
 									        if (isset($_GET['isactive'])){$fin_isactive= $_GET['isactive'];}else{$fin_isactive="";}
-									        if (isset($_GET['id_pengguna_web'])){$urutan = $_GET['id_pengguna_web'];}else{$urutan ="";}
+									        if (isset($_GET['id_team'])){$urutan = $_GET['id_team'];}else{$urutan ="";}
 									        
 
 									        if ($fin_isactive=="zzzd" && $urutan != ""){
-									            mysql_query("update penggunaweb set isactive=0 where id_pengguna_web='$urutan';");
+									            mysql_query("update team set isactive=0 where id_team='$urutan';");
 									        }
 										?>
 										

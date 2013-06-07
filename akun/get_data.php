@@ -155,7 +155,7 @@ class get_data {
             $data = mysql_query("SELECT pd.id_pengguna_device,pd.username_pengguna_device,pd.password_pengguna_device,
                     pd.id_sto,pd.id_team,t.nama_team,s.nama_sto
                 FROM penggunadevice AS pd, sto AS s, team AS t
-                WHERE pd.id_sto=s.id_sto AND pd.id_team=t.id_team AND pd.id_sto='$id_sto' AND pd.isactive=1 
+                WHERE pd.id_sto=s.id_sto AND pd.id_team=t.id_team AND pd.id_sto='$sto' AND pd.isactive=1 
                 LIMIT $limit_start,$limit_end");
         }
 

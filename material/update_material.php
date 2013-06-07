@@ -1,13 +1,6 @@
 <?php
 	session_start();
-	if (!isset($_SESSION['username'])){
-		header('Location: http://localhost/swo/');
-	}else{
-		$username=$_SESSION['username'];
-		$id_sto=$_SESSION['id_sto'];
-		$id_pengguna=$_SESSION['id_pengguna_web'];
-		$hak=$_SESSION['hak'];
-	}
+	include("../session.php");
 ?>
 
 <!DOCTYPE html>
@@ -111,7 +104,7 @@
 						
 						<ul class="dropdown-menu dropdown-user-account">
 						<?php
-						include("connect.php");
+						include("../connect.php");
 						include '../akun_nav.php';
 						?>	
 						</ul>
@@ -137,7 +130,7 @@
 					
 					<div class="page-info hidden-phone">
 						<?php 
-							include("connect.php");
+							include("../connect.php");
 							
 							$id_penggunaan_material = $_GET['id_penggunaan_material'];
 							$q_team_header = mysql_query("select id_team from penggunaanmaterial where id_penggunaan_material='$id_penggunaan_material';");
@@ -273,9 +266,8 @@
 							Yang dikirim dari Android
 							-->
 
-							<?	//$id_penggunaan_material = $_GET['id_penggunaan material'];
-								mysql_connect("localhost","root","dora");
-								mysql_select_db("swo_bagas_dua");
+							<?php	//$id_penggunaan_material = $_GET['id_penggunaan material'];
+								
 								$id_penggunaan_material = $_GET['id_penggunaan_material'];
 								$queryterpakai = mysql_query("select * from materialterpakai where id_team='$id_team';");
 								
@@ -390,8 +382,7 @@
 								Selisih Antara Akumulasi Pengambilan Material dengan Akumulasi Pemakaian Material
 							-->						
 							<?	//$id_penggunaan_material = $_GET['id_penggunaan material'];
-								mysql_connect("localhost","root","dora");
-								mysql_select_db("swo_bagas_dua");
+								
 								$id_penggunaan_material = $_GET['id_penggunaan_material'];
 								$query = mysql_query("select * from penggunaanmaterial where id_team='$id_team';");
 								
