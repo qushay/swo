@@ -1,5 +1,5 @@
 <?php
-include("connect.php");
+include("../connect.php");
 ?>
 
 <?php
@@ -40,7 +40,7 @@ function getIdTeamFromNamaTeam($nama_team){
 
 $id_team2 = getIdTeamFromNamaTeam($id_team);
 $query = mysql_query("select * from pengambilanmaterial where id_team='$id_team2';");
-if(mysql_num_rows > 0){
+if(mysql_num_rows($query) > 0){
 	
 }else{
 
@@ -48,8 +48,8 @@ if(mysql_num_rows > 0){
 	Penggunaan Material itu isinya sisa Material yang diupload dari HP
 	*/
 	
-	mysql_query("insert into penggunaanmaterial(id_team,jumlah_ont, sn_ont, jumlah_roset, kabel_50, kabel_75, kabel_100, jumlah_duct, jumlah_flexible_pipe, createdate, createby) values('$id_team2','$jml_ont','$sn_ont','$jml_roset','$kabel_50','$kabel_75','$kabel_100','$jml_duct','$jml_flex_pipe',NOW(), '$id_pengguna');");
-	mysql_query("insert into pengambilanmaterial(id_team,jumlah_ont, sn_ont, jumlah_roset, kabel_50, kabel_75, kabel_100, jumlah_duct, jumlah_flexible_pipe, createdate, createby) values('$id_team2','$jml_ont','$sn_ont','$jml_roset','$kabel_50','$kabel_75','$kabel_100','$jml_duct','$jml_flex_pipe', NOW(), '$id_pengguna');");
+	mysql_query("insert into penggunaanmaterial(id_team,jumlah_ont, sn_ont, jumlah_roset, kabel_50, kabel_75, kabel_100, jumlah_duct, jumlah_flexible_pipe, createdate, createby) values('$id_team2','$jml_ont','$sn_ont','$jml_roset','$kabel_50','$kabel_75','$kabel_100','$jml_duct','$jml_flex_pipe',NOW(),'$id_pengguna');");
+	mysql_query("insert into pengambilanmaterial(id_team,jumlah_ont, sn_ont, jumlah_roset, kabel_50, kabel_75, kabel_100, jumlah_duct, jumlah_flexible_pipe, createdate, createby) values('$id_team2','$jml_ont','$sn_ont','$jml_roset','$kabel_50','$kabel_75','$kabel_100','$jml_duct','$jml_flex_pipe', NOW(),'$id_pengguna');");
 	mysql_query("insert into materialterpakai(id_team,jumlah_ont, sn_ont, jumlah_roset, kabel_50, kabel_75, kabel_100, jumlah_duct, jumlah_flexible_pipe, createdate, createby) values('$id_team2',0,'$sn_ont',0,0,0,0,0,0, NOW(), '$id_pengguna');");
 	mysql_query("insert into perubahantable(nama_table, id_team, tgl_perubahan, createby, createdate) values('penggunaanmaterial','$id_team',NOW(),'$id_pengguna',NOW())");
 	mysql_query("insert into log(aksi, createdate, createby) values('Awal Pengambilan Material Oleh Team',NOW(),'$id_pengguna');");

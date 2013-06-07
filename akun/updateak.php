@@ -1,7 +1,6 @@
 <?php
 
- mysql_connect("localhost","root","dora");
- mysql_select_db("swo_bagas_dua");
+ include("../connect.php");
 ?>
 
 <?php

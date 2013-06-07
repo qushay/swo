@@ -139,8 +139,7 @@
 							-->
 						
 							<?	//$id_penggunaan_material = $_GET['id_penggunaan material'];
-								mysql_connect("localhost","root","yastahaa");
-								mysql_select_db("swo");
+								include("../connect.php"):
 								$id_penggunaan_material = $_GET['id_penggunaan_material'];
 								$query = mysql_query("select * from penggunaanmaterial where id_penggunaan_material='$id_penggunaan_material';");
 								
@@ -272,8 +271,7 @@
 							-->
 						
 							<?	//$id_penggunaan_material = $_GET['id_penggunaan material'];
-								mysql_connect("localhost","root","yastahaa");
-								mysql_select_db("swo");
+								
 								$id_penggunaan_material = $_GET['id_penggunaan_material'];
 								$query = mysql_query("select * from penggunaanmaterial where id_penggunaan_material='$id_penggunaan_material';");
 								
@@ -408,9 +406,8 @@
 							</div>
 							-->
 						
-							<?	//$id_penggunaan_material = $_GET['id_penggunaan material'];
-								mysql_connect("localhost","root","yastahaa");
-								mysql_select_db("swo");
+							<?php	//$id_penggunaan_material = $_GET['id_penggunaan material'];
+								
 								$id_penggunaan_material = $_GET['id_penggunaan_material'];
 								$query = mysql_query("select * from penggunaanmaterial where id_penggunaan_material='$id_penggunaan_material';");
 								
