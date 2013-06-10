@@ -360,7 +360,7 @@
 
 								if($hak=="super"){	
 									echo "<label>Pilih Team</label>";
-									echo "<select class='cselect span8' style='width:200px; z-index=-1' data-placeholder='Select category...' name='id_team' id='id_team'>";
+									echo "<select class='cselect span4' style='width:200px; z-index=-1' data-placeholder='Select category...' name='id_team' id='id_team'>";
 									echo "<option />";
 
 									$get_nama_team = mysql_query("select id_team,nama_team from team;");
@@ -375,35 +375,35 @@
 									$get_nama_team = mysql_query("select nama_team from team where id_sto='$id_sto';");
 									while($rows=mysql_fetch_array($get_nama_team)){
 										echo "<label>Pilih Team</label>";
-										echo "<input type='text' class='span8'  value='$rows[nama_team]' name='id_team' id='id_team' readonly/>";	
+										echo "<input type='text' class='span4'  value='$rows[nama_team]' name='id_team' id='id_team' readonly/>";	
 									}
 								}
 							
 							?>
 
 						<label>Jumlah ONT</label>
-						<input type="text" class="span8" placeholder="Input Jumlah ONT" name="jml_ont" id="jml_ont"/>
+						<input type="text" class="span4" placeholder="Input Jumlah ONT" name="jml_ont" id="jml_ont" style="height:27"/>
 						
 						<!-- <label>Serial Number ONT</label>
 						<input type="text" class="span8" placeholder="Input Serial Number ONT" name="sn_ont" id="sn_ont"/> -->
 						
 						<label>Jumlah ROSET</label>
-						<input type="text" class="span8" placeholder="Input Jumlah Roset" name="jml_roset" id="jml_roset"/>
+						<input type="text" class="span4" placeholder="Input Jumlah Roset" name="jml_roset" id="jml_roset" style="height:27"/>
 						
 						<label>Kabel 50</label>
-						<input type="text" class="span8" placeholder="Input Kabel 50" name="kabel_50" id="kabel_50"/>
+						<input type="text" class="span4" placeholder="Input Kabel 50" name="kabel_50" id="kabel_50" style="height:27"/>
 						
 						<label>Kabel 75</label>
-						<input type="text" class="span8" placeholder="Input Kabel 75" name="kabel_75" id="kabel_75"/>
+						<input type="text" class="span4" placeholder="Input Kabel 75" name="kabel_75" id="kabel_75" style="height:27"/>
 						
 						<label>Kabel 100</label>
-						<input type="text" class="span8" placeholder="Input Kabel 100" name="kabel_100" id="kabel_100"/>
+						<input type="text" class="span4" placeholder="Input Kabel 100" name="kabel_100" id="kabel_100" style="height:27"/>
 						
 						<label>Jumlah Duct</label>
-						<input type="text" class="span8" placeholder="Input Jumlah Duct" name="jml_duct" id="jml_duct"/>
+						<input type="text" class="span4" placeholder="Input Jumlah Duct" name="jml_duct" id="jml_duct" style="height:27"/>
 						
 						<label>Jumlah Flexible Pipe</label>
-						<input type="text" class="span8" placeholder="Input Flexible Pipe" name="jml_flex_pipe" id="jml_flex_pipe" />
+						<input type="text" class="span4" placeholder="Input Flexible Pipe" name="jml_flex_pipe" id="jml_flex_pipe" style="height:27"/>
 						<!--
 						<label>Tanggal Ambil</label>
 						<input type="text" class="datePicker" value="07-07-2013" data-date-format="dd-mm-yyyy" placeholder="Input Tanggal Ambil" name="tgl_ambil" id="tgl_ambil"/>
@@ -439,33 +439,33 @@
 					<fieldset>
 						
 						<label>Id Team</label>
-						<input type="text" class="required" placeholder="Input Id Team" name="id_team2" id="id_team2" readonly/>
+						<input type="text" class="required" placeholder="Input Id Team" name="id_team2" id="id_team2" style="height:27" readonly/>
 						
 		
 						<label>Jumlah ONT</label>
-						<input type="text" class="span8" placeholder="Input Jumlah ONT" name="jml_ont2" id="jml_ont2"/>
+						<input type="text" class="span4" placeholder="Input Jumlah ONT" name="jml_ont2" id="jml_ont2" style="height:27"/>
 						
 						<!-- <label>Serial Number ONT</label>
 						<input type="text" class="span8" placeholder="Input Serial Number ONT" name="sn_ont2" id="sn_ont2"/> -->
 						
 						<label>Jumlah ROSET</label>
-						<input type="text" class="span8" placeholder="Input Jumlah Roset" name="jml_roset2" id="jml_roset2"/>
+						<input type="text" class="span4" placeholder="Input Jumlah Roset" name="jml_roset2" id="jml_roset2" style="height:27"/>
 						
 						<label>Kabel 50</label>
-						<input type="text" class="span8" placeholder="Input Kabel 50" name="kabel_502" id="kabel_502"/>
+						<input type="text" class="span4" placeholder="Input Kabel 50" name="kabel_502" id="kabel_502" style="height:27"/>
 						
 						<label>Kabel 75</label>
-						<input type="text" class="span8" placeholder="Input Kabel 75" name="kabel_752" id="kabel_752"/>
+						<input type="text" class="span4" placeholder="Input Kabel 75" name="kabel_752" id="kabel_752" style="height:27"/>
 						
 						<label>Kabel 100</label>
-						<input type="text" class="span8" placeholder="Input Kabel 100" name="kabel_1002" id="kabel_1002"/>
+						<input type="text" class="span4" placeholder="Input Kabel 100" name="kabel_1002" id="kabel_1002" style="height:27"/>
 
 						
 						<label>Jumlah Duct</label>
-						<input type="text" class="span8" placeholder="Input Jumlah Duct" name="jml_duct2" id="jml_duct2"/>
+						<input type="text" class="span4" placeholder="Input Jumlah Duct" name="jml_duct2" id="jml_duct2" style="height:27"/>
 						
 						<label>Jumlah Flexible Pipe</label>
-						<input type="text" class="span8" placeholder="Input Flexible Pipe" name="jml_flex_pipe2" id="jml_flex_pipe2" />
+						<input type="text" class="span4" placeholder="Input Flexible Pipe" name="jml_flex_pipe2" id="jml_flex_pipe2" style="height:27"/>
 						
 						<!--<label>Tanggal Ambil</label>
 						<input type="text" class="datePicker" value="07-07-2013" data-date-format="dd-mm-yyyy" placeholder="Input Tanggal Ambil" name="tgl_ambil2" id="tgl_ambil2"/> -->

@@ -34,7 +34,7 @@
 
 
 									<?php
-										include("connect.php");
+										include("../connect.php");
 										$i=1;
  										$pilihnama=$_GET['pilihnama'];
 

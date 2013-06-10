@@ -332,7 +332,6 @@
 											}
 										</script>
 										<?php
-
 									        if (isset($_GET['isactive'])){$fin_isactive= $_GET['isactive'];}else{$fin_isactive="";}
 									        if (isset($_GET['id_pengguna_web'])){$urutan = $_GET['id_pengguna_web'];}else{$urutan ="";}
 									        
@@ -439,23 +438,23 @@
 						<fieldset>
 						
 						<label>Nama</label>
-						<input type="text" class="span8" placeholder="Nama" name="nama" id="nama"/>
+						<input type="text" class="span4" placeholder="Nama" name="nama" id="nama" style="height:27"/>
 
 						<label>Username</label>
-						<input type="text" class="span8" placeholder="Input Username" name="username" id="username"/>
+						<input type="text" class="span4" placeholder="Input Username" name="username" id="username" style="height:27"/>
 					
 						<label>Password</label>
-						<input type="password" class="span8" placeholder="Input Password" name="password" id="password"/>
+						<input type="password" class="span4" placeholder="Input Password" name="password" id="password" style="height:27"/>
 						
 						<label>Confirm Password</label>
-						<input type="password" class="span8" placeholder="Input Konfirmasi Password" name="cpassword" id="cpassword"/>
+						<input type="password" class="span4" placeholder="Input Konfirmasi Password" name="cpassword" id="cpassword" style="height:27"/>
 						
 
 							
 							<?php
 								if($hak=="super"){	
 									echo "<label>Pilih STO</label>";
-									echo "<select class='cselect span8' style='width:200px; z-index=-1' data-placeholder='Select category...' name='id_sto' id='id_sto'>";
+									echo "<select class='cselect span4' style='width:200px; z-index=-1' data-placeholder='Select category...' name='id_sto' id='id_sto'>";
 									echo "<option />";
 									$q_get_id_team = mysql_query("select id_team from sto where id_sto='$id_sto';");
 									$ar_get_id_sto = mysql_fetch_array($q_get_id_team);
@@ -472,7 +471,7 @@
 									$get_nama_sto = mysql_query("select nama_sto from sto where id_sto='$id_sto';");
 									while($rows=mysql_fetch_array($get_nama_sto)){
 										echo "<label>Pilih STO</label>";
-										echo "<input type='text' class='span8'  value='$rows[nama_sto]' name='id_sto' id='id_sto' readonly/>";	
+										echo "<input type='text' class='span4'  value='$rows[nama_sto]' name='id_sto' id='id_sto' readonly/>";	
 									}
 								}
 							
@@ -536,17 +535,17 @@
 							
 							
 							<label>Id Pengguna Web</label>
-							<input type="text" class="span8" placeholder="Input Id Pengguna Web" name="id_pengguna_web" id="id_pengguna_web" value='<?php echo $id_pengguna_web;?>' readonly/>
+							<input type="text" class="span4" placeholder="Input Id Pengguna Web" name="id_pengguna_web" id="id_pengguna_web" value='<?php echo $id_pengguna_web;?>' style="height:27" readonly/>
 							
 							<label>Nama</label>
-							<input type="text" class="span8" placeholder="Input Nama Pengguna Web" name="nama_tambah" id="nama_tambah" value='<?php echo $nama; ?>' />											
+							<input type="text" class="span4" placeholder="Input Nama Pengguna Web" name="nama_tambah" id="nama_tambah" value='<?php echo $nama; ?>' style="height:27"/>											
 									
 							<label>Username</label>
-							<input type="text" class="span8" placeholder="Input Username" name="username_pengguna_web" id="username_pengguna_web" value='<?php echo $username_pengguna_web; ?>'/>
+							<input type="text" class="span4" placeholder="Input Username" name="username_pengguna_web" id="username_pengguna_web" value='<?php echo $username_pengguna_web; ?>' style="height:27"/>
 							
 							
 							<label>Password</label>
-							<input type="text" class="span8" placeholder="Input Password Pengguna Web" name="password_pengguna_web" id="password_pengguna_web" value='<?php echo $password_pengguna_web; ?>'/>
+							<input type="text" class="span4" placeholder="Input Password Pengguna Web" name="password_pengguna_web" id="password_pengguna_web" value='<?php echo $password_pengguna_web; ?>' style="height:27"/>
 							
 							
 							<!-- <label>Id STO</label>
@@ -554,7 +553,7 @@
 							<?php
 								if($hak=="super"){	
 									echo "<label>Pilih STO</label>";
-									echo "<select class='cselect span8' style='width:200px' data-placeholder='Select category...' name='id_sto2' id='id_sto2'>";
+									echo "<select class='cselect span4' style='width:200px' data-placeholder='Select category...' name='id_sto2' id='id_sto2'>";
 									echo "<option />";
 									$al_nama_sto = array();
 									$al_id_sto = array();
@@ -572,7 +571,7 @@
 									$get_nama_sto = mysql_query("select nama_sto from sto where id_sto='$id_sto';");
 									while($rows=mysql_fetch_array($get_nama_sto)){
 										echo "<label>Pilih STO</label>";
-										echo "<input type='text' class='span8'  value='$rows[nama_sto]' name='id_sto2' readonly/>";	
+										echo "<input type='text' class='span4'  value='$rows[nama_sto]' name='id_sto2' readonly/>";	
 								
 									}
 								}
@@ -581,7 +580,7 @@
 							
 							
 							<label>Hak Pengguna Web</label>
-							<select class="span8" name="hak_pengguna_web" id="hak_pengguna_web">;
+							<select class="span4" name="hak_pengguna_web" id="hak_pengguna_web">;
 							<?php
 							if($hak=="super"){
 								

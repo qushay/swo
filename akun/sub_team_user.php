@@ -44,9 +44,9 @@
 										}
 
 										if($pilihnama == ""){
-											$data = mysql_query("SELECT * FROM team");
+											$data = mysql_query("SELECT * FROM team WHERE isactive=1");
 										}else{
-											$data = mysql_query("SELECT * from team where nama_team like '%$pilihnama%';");
+											$data = mysql_query("SELECT * from team WHERE isactive=1 AND nama_team like '%$pilihnama%';");
 										}
 
 										if($jumlah_baris!=""){

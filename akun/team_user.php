@@ -400,12 +400,25 @@
 										}
 									</script>
 										<?php
+											function checkOnWoInstalasi($id_team){
+												$q_check_on_woinstalasi=mysql_query("select id_team from woinstalasi where id_team='$id_team';");
+												$jum_query = mysql_num_rows($q_check_on_woinstalasi);
+
+												$q_check_on_womigrasi=mysql_query("select id_team from womigrasi where id_team='$id_team';");
+												$jum_query2 = mysql_num_rows($q_check_on_womigrasi);
+
+												if($jum_query > 0 || $jum_query2 > 0){
+													return true;
+												}else{
+													return false;
+												}
+											}
 
 									        if (isset($_GET['isactive'])){$fin_isactive= $_GET['isactive'];}else{$fin_isactive="";}
 									        if (isset($_GET['id_team'])){$urutan = $_GET['id_team'];}else{$urutan ="";}
 									        
-
-									        if ($fin_isactive=="zzzd" && $urutan != ""){
+									        $check = checkOnWoInstalasi($urutan);
+									        if ($fin_isactive=="zzzd" && $urutan != "" && $check==false){
 									            mysql_query("update team set isactive=0 where id_team='$urutan';");
 									        }
 										?>
