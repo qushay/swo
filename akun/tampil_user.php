@@ -316,15 +316,31 @@
 											function setIdValue(id_pengguna_web, username_pengguna_web, password_pengguna_web, id_sto, hak_pengguna_web, nama){
 												
 												var username = $('#username_pengguna_web').val(username_pengguna_web);
-												
 												document.getElementById("password_pengguna_web").value=password_pengguna_web;
 												document.getElementById("id_pengguna_web").value=id_pengguna_web;
-												//document.getElementById("id_sto2").value=id_sto;
-												
 												var hak = $('#hak_pengguna_web').val(hak_pengguna_web);
-												
 												document.getElementById("nama_tambah").value=nama;
+
+												var xmlhttp;
+											if (window.XMLHttpRequest)
+											  {// code for IE7+, Firefox, Chrome, Opera, Safari
+											  xmlhttp=new XMLHttpRequest();
+											  }
+											else
+											  {// code for IE6, IE5
+											  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+											  }
+											xmlhttp.onreadystatechange=function()
+											  {
+											  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+												{
 												
+												
+												}
+											  }
+											  xmlhttp.open("GET","http://localhost/swo/akun/tampil_user.php?jajalid=1",true);
+											  console.log("id");
+
 											}
 
 											function setDisable(active_value, id_pengguna_web){
@@ -523,6 +539,23 @@
 				<!-- ************ -->
 
 				<!-- Modal Edit User -->
+				<?php
+				
+				$jajalid = $_GET['jajalid'];
+				//$jajalid = "test";
+				echo "<div id='myModalEditUserjajal' class='modal hide fade' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+					  <div class='modal-header'>
+						<button type='button' class='close' data-dismiss='modal' aria-hidden='true'><i class='icon-remove-circle'></i></button>
+						<h3 id='myModalLabel'>".$jajalid."</h3>
+					  </div>
+					  <div class='modal-body'>
+					  </div>
+					  </div>
+					  ";									
+				
+
+				?>
+
 				<div id="myModalEditUser" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove-circle"></i></button>

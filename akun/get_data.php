@@ -99,46 +99,18 @@ class get_data {
             echo "<td>".$databaru['nama_sto']."</td>";
             echo "<td>".getHakPenggunaWeb($databaru['hak_pengguna_web'])."</td>";
             echo "<td>".$databaru['nama']."</td>";
-
-            
+            //echo "<td><a href='#myModalEditUserjajal' class='btn btn-small btn-primary' id='filter' data-toggle='modal' onClick=setIdValue('$baca_index[$i]','$databaru[username_pengguna_web]','$databaru[password_pengguna_web]','$databaru[id_sto]','$databaru[hak_pengguna_web]','$databaru[nama]');>Update</a></td>";
             echo "<td><a href='#myModalEditUser' class='btn btn-small btn-primary' id='filter' data-toggle='modal' onClick=setIdValue('$baca_index[$i]','$databaru[username_pengguna_web]','$databaru[password_pengguna_web]','$databaru[id_sto]','$databaru[hak_pengguna_web]','$databaru[nama]');>Update</a></td>";
-            
-            
-            /*echo "<td><a class='updateuser btn btn-small btn-primary' data-toggle='modal' hiddenid='$i'>
-            <input class='hiddenId' type='hidden' value='$i'/>
-            Update</td>";*/
-            
             echo "<td><a href='#' class='btn btn-small btn-danger' id='filter' onClick=setDisable('zzzd','$databaru[id_pengguna_web]');>Disable </a></td>";
-            
-        
             echo "</tr>";
             
             $i++;
             
         }
 
-/*        echo "<html>
-        <script type='text/javascript' src='library/js/jquery-1.8.3.min.js'></script>
-        <script type='text/javascript'>
-        $(document).ready(
-            function(){
-                $('.updateuser').click(
-                    function(){
-                        var id=$(this).find('.hiddenid').val();
-                        console.log('UPDATEUSER');
-                        $('#myModalEditUser').load('get_data_tampil_user.php?id='+1);
-                        console.log(id);                
-                    }
-
-                    )
-
-            }
-        );
-        </script>
-        <div id='myModalEditUser' class='modal hide fade' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
-        </div>
-        </html>";*/
     }
+
+
 
     public function getAkunDevice($sto,$limit_start){
         $limit_end=30;
